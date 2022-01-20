@@ -1,8 +1,8 @@
 function fib(posicao) {
     switch(posicao) {
-        case num == 1:
+        case 1:
             return 1
-        case posicao == 2:
+        case 2:
             return 2
         default:
             return fib(posicao - 1) + fib(posicao - 2)
