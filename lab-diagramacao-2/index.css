@@ -32,6 +32,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    color: white;
 }
 header div {
     width: fit-content;
@@ -44,7 +45,6 @@ header div {
 .title h1 {
     width: fit-content;
     margin: auto;
-    color: white;
     font-size: 80px;
     line-height: 70px;
 }
@@ -52,7 +52,6 @@ header div {
     width: fit-content;
     margin: auto;
     font-weight: 300;
-    color: white;
 }
 
 nav {
@@ -71,6 +70,17 @@ nav {
     border: 1px solid white;
     border-radius: 50px;
     margin: 0 9px;
+}
+
+header .seta {
+    position: absolute;
+    bottom: 10px;
+    animation: infinite alternate .5s pulando ease-out;
+    width: 60px;
+}
+@keyframes pulando {
+    from { margin-bottom: 0 }
+    to { margin-bottom: 25px }
 }
 
 .welcome {
