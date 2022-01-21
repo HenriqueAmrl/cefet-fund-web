@@ -9,6 +9,6 @@ function fib(posicao) {
     }
 }
 
-for(let i = 1; i <= 100; ++i) {
+for(let i = 1; i <= 10; ++i) {
     console.log(`Fibonacci na posição ${i} = ${fib(i)}`)
 }
