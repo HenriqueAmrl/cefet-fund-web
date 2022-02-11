@@ -1,0 +1,7 @@
+:root {
+    --color-dark: #5a68b8;
+    --color-light: #fff;
+    --text-over-dark: #fff;
+    --text-over-light: #a19f9d;
+    --mq-mobile: 600px;
+}

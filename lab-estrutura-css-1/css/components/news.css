@@ -1,0 +1,16 @@
+.news__image {
+    width: 100%;
+}
+
+.news__title {
+    color: var(--color-dark);
+    font-weight: lighter;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+
+.news__text {
+    font-weight: lighter;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}

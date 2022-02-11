@@ -1,0 +1,13 @@
+.button {
+    background-color: var(--color-dark);
+    display: inline-block;
+    font-size: 0.9em;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: transform .2s;
+}
+
+.button:hover {
+    transform: scale(1.1) !important;
+}
