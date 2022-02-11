@@ -21,6 +21,7 @@ body {
     min-height: 100vh;
     box-sizing: border-box;
     font-family: 'Outfit';
+    overflow-x: hidden;
 }
 
 @media (min-width: 1200px) {
@@ -90,10 +91,10 @@ hr {
     margin-bottom: 20px;
 }
 
-input {
-    margin-bottom: 10px;
+input, textarea {
     padding: 5px;
     outline: none;
+    display: block;
 }
 
 /* lists */
@@ -133,6 +134,12 @@ td, th {
     gap: inherit;
     width: 90%;
     margin: 0 auto;
+}
+
+.flex-wrap-gap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 @media(max-width: 1000px) {
