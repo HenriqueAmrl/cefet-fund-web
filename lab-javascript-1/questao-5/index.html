@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+
+    <link rel="stylesheet" href="../../css-padrao.css">
+    <link rel="stylesheet" href="../../sintax-highlight.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Laboratório 1 - Javascript</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section>
+
+                <h2>Questão 5</h2>
+                <hr>
+                <h3>Desafio:</h3>
+                <p>
+                    Criar um programa capaz de imprimir todos os números primos até 1000.
+                </p>
+                <h3>Código:</h3>
+                <pre><code class="code-js">function primo(num) {
+    for(let i = 2; i < num; ++i) {
+        if(num % i == 0) return false
+    }
+    return true
+}
+
+for(let i = 2; i <= 1000; ++i) {
+    if(primo(i)) {
+        console.log(i)
+    }
+}                           
+</code></pre>
+
+                <p>*Para ver o código acima funcionando, <span class="destaque">abra o console.</span></p>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/javascript.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

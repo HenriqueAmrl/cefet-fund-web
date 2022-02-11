@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+
+    <link rel="stylesheet" href="../../css-padrao.css">
+    <link rel="stylesheet" href="../../sintax-highlight.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Laboratório 1 - Javascript</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section>
+
+                <h2>Questão 4</h2>
+                <hr>
+                <h3>Desafio:</h3>
+                <p>
+                    Criar um programa capaz de imprimir todos os números da sequência de Fibonacci de 1 a 100.
+                </p>
+                <p><strong>Obs.: </strong> No código em execução no navegador, a sequência é calculada somente até a 10ª posição, para não travar a página.</p>
+
+                <h3>Código:</h3>
+                <pre><code class="code-js">function fib(posicao) {
+    switch(posicao) {
+        case 1:
+            return 1
+        case 2:
+            return 2
+        default:
+            return fib(posicao - 1) + fib(posicao - 2)
+    }
+}
+
+for(let i = 1; i <= 100; ++i) {
+    console.log(`Fibonacci na posição ${i} = ${fib(i)}`)
+}             
+</code></pre>
+
+                <p>*Para ver o código acima funcionando, <span class="destaque">abra o console.</span></p>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/javascript.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

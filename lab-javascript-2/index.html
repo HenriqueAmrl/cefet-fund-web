@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+
+    <link rel="stylesheet" href="../../css-padrao.css">
+    <link rel="stylesheet" href="../../sintax-highlight.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Laboratório 1 - Javascript</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section>
+
+                <h2>Questão 1</h2>
+                <hr>
+                <h3>Desafio:</h3>
+                <p>
+                    Criar um programa para calcular o fatorial de um número.
+                </p>
+
+                <h3>Código:</h3>
+                <pre><code class="code-js">function fatorial(num) {
+    if(num < 0)
+        return "Informe um número maior ou igual a 0"
+    if(num <= 1)
+        return 1
+    return num * fatorial(num - 1)
+}
+
+console.log(`Fatorial de 12 = ${fatorial(12)}`)
+</code></pre>
+
+                <p>*Para ver o código acima funcionando, <span class="destaque">abra o console.</span></p>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/javascript.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>
