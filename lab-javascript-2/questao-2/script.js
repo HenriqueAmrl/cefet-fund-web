@@ -5,7 +5,7 @@ function scoreVowels(string) {
     for(let i = 0; i < string.length; ++i) {
         let letter = string[i]
 
-        scored += vowels.includes(letter) ? `<strong>${letter}</strong>` : letter
+        scored += vowels.includes(letter.toLowerCase()) ? `<strong>${letter}</strong>` : letter
     }
 
     return scored
