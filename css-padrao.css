@@ -148,6 +148,11 @@ button:hover {
     background-color: #528d17;
 }
 
+button:disabled {
+    background-color: gray;
+    cursor: default;
+}
+
 
 .container {
     display: inherit;
