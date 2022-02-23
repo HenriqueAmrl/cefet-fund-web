@@ -1,11 +1,11 @@
 function calculateAge(date) {
     let now = new Date
-    let days = secondsToDays(now - date) - 1 // Desconsidera o dia atual
+    let days = msecondsToDays(now - date)
     return days >= 0 ? days : 0
 }
 
-function secondsToDays(seconds) {
-    return (seconds / 86400000).toFixed()
+function msecondsToDays(seconds) {
+    return Math.floor(seconds / 86400000)
 }
 
 function dateFormat(string) {
