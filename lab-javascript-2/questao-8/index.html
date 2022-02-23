@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questão 5</title>
+    <title>Questão 8</title>
 
     <link rel="stylesheet" href="../../css-padrao.css">
     <link rel="stylesheet" href="../../sintax-highlight.css">
@@ -22,38 +22,29 @@
         <div class="container">
             <section>
 
-                <h2>Questão 5</h2>
+                <h2>Questão 8</h2>
                 <hr>
                 <h3>Desafio:</h3>
                 <p>
-                    Fazer um programa que implemente a funcionalidade substituir em textos, ou seja, terá um campo
-                    "procurar" e um campo "substituir".
+                    Fazer um programa que leia duas datas e indique em semanas a distância entre elas.
                 </p>
                 <h3>Solução:</h3>
                 <div class="flex-wrap-gap">
                     <div style="flex: 1 0 300px;">
-                        <h4>Texto: </h4>
-                        <textarea type="text" name="text" id="text" autocomplete="off"
-                            placeholder="Digite o texto aqui" style="width:100%" rows="10"></textarea>
+                        <h4>Input: </h4>
+                        <label>Data inicial
+                            <input type="text" name="input1" id="input1" autocomplete="off" placeholder="dd/mm/aaaa"
+                                style="width:100%"></input>
+                        </label>
+                        <label>Data final
+                            <input type="text" name="input2" id="input2" autocomplete="off" placeholder="dd/mm/aaaa"
+                                style="width:100%"></input>
+                        </label>
+                        <button id="calculate" disabled>Calcular</button>
                     </div>
                     <div style="flex: 1 0 300px;">
-                        <h4>Filtro: </h4>
-                        <div id="filter">
-                            <label>
-                                Procurar
-                                <input id="search" type="text" placeholder="Texto a ser buscado">
-                            </label>
-                            <label>
-                                Substituir
-                                <input id="replace" type="text" placeholder="Texto a ser substituído">
-                            </label>
-                            <label>
-                                Case sensitive?
-                                <input style="display: inline-block;" type="checkbox" name="case-sensitive" id="case-sensitive" checked>
-                            </label>
-                            <button id="replace-all">Substituir</button>
-
-                        </div>
+                        <h4>Output: </h4>
+                        <div id="output"></div>
                     </div>
                 </div>
                 <h3>Código:</h3>

@@ -1,55 +1,37 @@
-function countWords(string) {
-    string = removeSpecialChars(string)
-        .toLowerCase()
-        .trim()
-
-    let words = string.split(' ')
-    let wordsObj = initializeObjectWithArrayAsKeys(words)
-
-    words.forEach(word => {
-        wordsObj[word]++
-    });
-    return wordsObj
-}
-
-function removeSpecialChars(string) {
-    specialChars = ['+', '-', '&', '|', '!', '(', ')', '{', '}', '[', ']', '^', '~', '*', '?', ';', ':', '.', ',']
-
-    specialChars.forEach(char => {
-        string = string.replaceAll(char, '')
-    });
-    return string
-}
-
-function initializeObjectWithArrayAsKeys(array) {
-    obj = {}
-
-    array.forEach(key => {
-        obj[key] = 0
-    })
-    return obj
-}
-
-function frequentWord(string) {
-    if (string.trim() == '') return ''
-    wordsObj = countWords(string)
-    let frequentestValue = 0
-    let frequentestWord
-
-    for (word in wordsObj) {
-        let qtd = wordsObj[word]
-        if (qtd > frequentestValue) {
-            frequentestWord = word
-            frequentestValue = qtd
+function replaceText(text, search, replace, caseSensitive) {
+    if(caseSensitive) {
+        text = text.replaceAll(search, replace)
+    }
+    else {
+        search = search.toLowerCase()
+        while(text.toLowerCase().includes(search)) {
+            let {start, end} = getLimitIndexesOfString(text.toLowerCase(), search)
+            text = text.substring(0, start) + replace + text.substring(end)
         }
     }
 
-    return `A palavra mais frequente foi <strong>${frequentestWord}</strong> e ela foi repetida <strong>${frequentestValue} ${frequentestValue == 1 ? 'vez' : 'vezes</strong>'}`
+    return text
 }
 
-let input = document.querySelector('#input')
-let output = document.querySelector('#output')
+function getLimitIndexesOfString(string, substring) {
+    start = string.indexOf(substring)
+    end = start + substring.length
 
-input.addEventListener('keyup', () => {
-    output.innerHTML = frequentWord(input.value)
+    return {
+        start: start,
+        end: end
+    }
+}
+
+
+let replaceAll = document.querySelector('#replace-all')
+let textArea = document.querySelector('#text')
+
+replaceAll.addEventListener('click', () => {
+    let text = textArea.value
+    let search = document.querySelector('#search').value
+    let replace = document.querySelector('#replace').value
+    let caseSensitive = document.querySelector('#case-sensitive').checked
+
+    textArea.value = replaceText(text, search, replace, caseSensitive)
 })
